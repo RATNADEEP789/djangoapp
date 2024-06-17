@@ -85,16 +85,29 @@ WSGI_APPLICATION = 'djangoproject.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'assessment_test',
+#         'USER':'assessment_app',
+#         'PASSWORD':'a$bMNL7!x',
+#         'HOST':'65.1.177.181',
+#         'PORT':'3306',
+#     }
+# } 
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'assessment_test',
-        'USER':'assessment_app',
-        'PASSWORD':'a$bMNL7!x',
-        'HOST':'65.1.177.181',
+        'NAME': 'registration_db',
+        'USER':'admin',
+        'PASSWORD':'admin12345',
+        'HOST':'djangodb.clcawmoaelik.ap-south-1.rds.amazonaws.com',
         'PORT':'3306',
     }
 } 
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -130,7 +143,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+#MEDIA_URL='/image/'
+STATICFILES_DIRS =[
+    os.path.join(BASE_DIR,'static')
+]
+APPEND_SLASH=False
+STATIC_ROOT = os.path.join(BASE_DIR,'assets')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
