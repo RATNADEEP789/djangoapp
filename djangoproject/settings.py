@@ -74,16 +74,27 @@ WSGI_APPLICATION = 'djangoproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'registration_db',
+#         'USER':'root',
+#         'PASSWORD':'',
+#         'HOST':'localhost',
+#         'PORT':'3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'registration_db',
-        'USER':'root',
-        'PASSWORD':'',
-        'HOST':'localhost',
+        'NAME': 'assessment_test',
+        'USER':'assessment_app',
+        'PASSWORD':'a$bMNL7!x',
+        'HOST':'65.1.177.181',
         'PORT':'3306',
     }
-}
+} 
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
